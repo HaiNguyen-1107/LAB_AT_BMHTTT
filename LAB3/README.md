@@ -15,4 +15,4 @@ NỘI DUNG ĐÃ THỰC HIỆN:
 - TH5: Bắt và so sánh gói tin HTTP Plaintext và gói tin HTTPS/TLS trên Wireshark (PASS).
 - TH6: Chạy tải DoS cục bộ và phân tích dữ liệu DDoS phân tán, Mail Bombing bất thường (PASS).
 - TH7: Phân tích 5 dấu hiệu Phishing email và bảng phân loại Social Engineering (PASS).
-- Tính toàn vẹn: Toàn bộ tệp bằng chứng trong thư mục Evidence được băm SHA-256 lưu tại evidence_sha256.csv.
+
