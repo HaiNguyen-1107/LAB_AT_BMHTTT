@@ -3,7 +3,7 @@
 - **Họ và tên:** Nguyễn Xuân Hải  
 - **MSSV:** 1150070010  
 - **Môn học:** An toàn & Bảo Mật Hệ Thống Thông Tin  
-- **Lớp:** 11_ĐH_HTTT_AT&BMHTTT (11TMĐT)  
+- **Lớp:** 11_ĐH_TMĐT
 
 ---
 
