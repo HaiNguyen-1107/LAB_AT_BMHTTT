@@ -44,7 +44,7 @@
 
 ## 3. Kết quả đánh giá
 - **Độ chính xác:** Toàn bộ các luật tường lửa tuân thủ đúng nguyên tắc First-Match và chính sách bảo mật Default Deny.
-- **Kiểm thử thực tế:** Các phiên xác thực người dùng Domain, lọc gói tin và cô lập vùng mạng đều đạt kết quả PASS 100%.
+- **Kiểm thử thực tế:** Kiểm thửu các kịch bản 1,2 còn 3,4,5 chưa kiểm thử được
 
 ---
 
