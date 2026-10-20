@@ -1,0 +1,17 @@
+LAB 7 – Xây dựng Chính sách Web Protection trên pfSense + Web Proxy
+Họ và tên: Nguyễn Xuân Hải
+MSSV: 1150070010
+Lớp: 11_ĐH_TMĐT
+
+1. Mô hình triển khai (Topology)
+pfSense (Firewall/Gateway): LAN 10.6.0.1, DMZ 172.16.6.1, MGMT 192.168.56.254.
+DC01 (Windows Server 2025): IP 10.6.0.10, phân giải DNS zone lab7.test.
+WEB-PROXY (Ubuntu): IP 10.6.0.30, chạy E2Guardian (:8080) -> Squid (:3128) + ClamAV.
+DMZ-WEB: IP 172.16.6.10, chứa website mô phỏng và file kiểm thử.
+Client-A / Client-B: IP 10.6.0.21 / 10.6.0.22, cấu hình Manual Proxy 10.6.0.30:8080.
+2. Các bước cấu hình chính
+DMZ-WEB & DNS: Chạy script tạo 13 website mô phỏng và cấu hình DNS zone lab7.test trên DC01 trỏ về 172.16.6.10.
+WEB-PROXY: Cài đặt bộ 3 squid, e2guardian, clamav-daemon; thiết lập lắng nghe tại port 8080 và trỏ upstream về Squid port 3128.
+pfSense Anti-bypass:
+Tạo Aliases: LAB7_CLIENTS (10.6.0.21, 10.6.0.22), LAB7_PROXY (10.6.0.30), WEB_PORTS (80, 443).
+Rule LAN: Cho phép DNS (53) -> Cho phép Client tới Proxy (8080) -> Chặn Client đi trực tiếp Web (80, 443) -> Cho phép Proxy ra ngoài Web (80, 443).
