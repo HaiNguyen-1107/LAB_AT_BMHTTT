@@ -4,7 +4,6 @@
 **Lớp:** 11_TMĐT  
 **MSSV:** 1150070010  
 
----
 
 ## 1. Mô hình mạng và Phân bổ IP
 - **pfSense Router/Firewall**: Interface `DNSLAB` (10.9.0.1/24) trên cổng `em4`, kết nối mạng ảo `dns-lab`.
@@ -12,7 +11,6 @@
 - **VICTIM (Client-A)**: `10.9.0.100/24` (Gateway: `10.9.0.1`).
 - **ATTACKER (Ubuntu-18)**: `10.9.0.200/24` (Gateway: `10.9.0.1`).
 
----
 
 ## 2. Thiết lập Tường lửa Cô lập trên pfSense
 Thiết lập 5 Rules nghiêm ngặt tại tab `Firewall > Rules > DNSLAB`:
@@ -22,7 +20,6 @@ Thiết lập 5 Rules nghiêm ngặt tại tab `Firewall > Rules > DNSLAB`:
 4. **Block + Log**: `DNSLAB subnets` -> `MGMT subnets` - Bảo vệ mạng quản trị Host.
 5. **Block + Log**: `DNSLAB subnets` -> `Any` - Cô lập tuyệt đối, cấm ra Internet/WAN.
 
----
 
 ## 3. Nội dung thực hiện: Task 1 - Local Redirection bằng file /etc/hosts
 - **Phía Attacker (10.9.0.200)**: Khởi chạy HTTP Server giả lập trên cổng 80:
@@ -35,12 +32,7 @@ Thiết lập 5 Rules nghiêm ngặt tại tab `Firewall > Rules > DNSLAB`:
   ```bash
   sudo cp /etc/hosts /etc/hosts.bak
   echo "10.9.0.200  www.lab9.test" | sudo tee -a /etc/hosts
-  ```
-- **Kết quả & Đánh giá**:
-  - Khi Victim truy cập `curl http://www.lab9.test`, hệ thống Name Service Switch (NSS) ưu tiên tra cứu tệp cục bộ `/etc/hosts` trước (`files dns`), khiến lưu lượng lập tức bị điều hướng sang Web Server của Attacker mà không cần gửi truy vấn DNS ra ngoài.
-  - Sau thử nghiệm, đã khôi phục lại file gốc: `sudo cp /etc/hosts.bak /etc/hosts`.
-
----
+  
 
 ## 4. Tệp tin đính kèm
 - File báo cáo chi tiết kèm hình ảnh minh chứng: `11TMĐT_Lab8_1150070010_NguyenXuanHai.docx`.
