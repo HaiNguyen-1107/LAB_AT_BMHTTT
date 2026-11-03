@@ -15,5 +15,5 @@ TRONG MÔI TRƯỜNG pfSense CÔ LẬP
 ---
 
 ## 2. Phần đã làm 
-1. **Cấu hình máy ảo:** 
+1. **Cấu hình các máy ảo:** 
 
