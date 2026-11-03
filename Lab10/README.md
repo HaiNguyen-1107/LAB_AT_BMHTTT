@@ -1,4 +1,9 @@
-# TIẾN ĐỘ THỰC HÀNH LAB 10 (DNS CACHE POISONING)
+# BÁO CÁO THỰC HÀNH LAB 10: REMOTE DNS CACHE POISONING
+TRONG MÔI TRƯỜNG pfSense CÔ LẬP
+**Môn học:** An toàn và Bảo mật Hệ thống Thông tin  
+**Sinh viên:** Nguyễn Xuân Hải  
+**Lớp:** 11_TMĐT  
+**MSSV:** 1150070010  
 
 ## 1. Phân bổ máy ảo (VMware)
 * **pfSense**: Gateway `10.9.0.1`, `10.10.0.1`, `172.16.6.1`
