@@ -1,4 +1,4 @@
-# BÁO CÁO THỰC HÀNH LAB 10: REMOTE DNS CACHE POISONING
+# BÁO CÁO THỰC HÀNH LAB 10: REMOTE DNS CACHE POISONING TRONG MÔI TRƯỜNG pfSense CÔ LẬP
 TRONG MÔI TRƯỜNG pfSense CÔ LẬP
 **Môn học:** An toàn và Bảo mật Hệ thống Thông tin  
 **Sinh viên:** Nguyễn Xuân Hải  
