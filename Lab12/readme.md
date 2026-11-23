@@ -27,8 +27,3 @@
 - **Bài 3.5 - Chữ ký số ECDSA:** Chưa làm (`ECCSignature.java`, `frm_ECC_Signature.java`).
 - **Phần 3 - Menu chính:** Chưa làm (`frm_Menu.java`).
 
-## 3. Cách chạy kiểm tra
-Do chưa tạo form menu chính (`frm_Menu`), vui lòng chạy từng file trong NetBeans bằng **Run File (`Shift + F6`)**:
-1. `RSADemo.java` — chạy bài 3.1 (Console).
-2. `frm_KetNoiSQL.java` — kết nối SQL Server (và mở `frm_LichSu`).
-3. `frm_RSA.java` — chạy bài 3.2 (RSA giao diện Swing).
